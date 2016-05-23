@@ -3,7 +3,7 @@ Chef::Log.info("Running deploy/before_symlink.rb...")
 
 execute "get s3 file" do
    cwd "#{release_path}"
-   command "mv /tmp/build.zip ./ && unzip build.zip"
+   command "mv /tmp/build.zip #{release_path} && unzip build.zip"
 end
 
 execute "get s3 file" do
