@@ -11,9 +11,9 @@ execute "get s3 file" do
    command "rm build.zip"
 end
 
-execute "mkdir" do
-  command "mkdir #{release_path}/data/ip2location"
-end
+#execute "mkdir" do
+#  command "mkdir #{release_path}/data/ip2location"
+#end
 
 execute "link on IP-COUNTRY.BIN" do
   command "ln -s /opt/IP-COUNTRY.BIN #{release_path}/data/ip2location/IP-COUNTRY.BIN"
